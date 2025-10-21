@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foro por la Hispanidad – Palencia</title>
+  <meta name="description" content="Todos nuestros enlaces en un solo lugar." />
+  <meta property="og:title" content="Foro por la Hispanidad – Palencia" />
+  <meta property="og:description" content="Conoce, sigue y únete al espíritu hispánico desde Palencia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./og-image.jpg" />
+  <meta name="theme-color" content="#6b0000" />
+  <link rel="icon" href="./favicon.ico" />
+  <style>
+    :root{
+      --bg: #0b0f1a;
+      --card: #141a2a;
+      --muted:#9aa3b2;
+      --text:#e6eaf2;
+      --brand:#6b0000;
+      --brand-2:#b48a36;
+      --ring:rgba(107,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 70% -10%, rgba(107,0,0,.12), transparent),
+                  radial-gradient(800px 600px at -10% 20%, rgba(180,138,54,.08), transparent),
+                  var(--bg);
+      color:var(--text);
+      display:flex; align-items:center; justify-content:center; padding:40px 16px;
+    }
+    .container{ width:100%; max-width:720px; }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px; padding:28px; box-shadow: 0 8px 30px rgba(0,0,0,.35);
+      backdrop-filter: blur(6px);
+    }
+    header{ display:flex; align-items:center; gap:16px; margin-bottom:18px; }
+    .avatar{ width:90px; height:90px; border-radius:50%; object-fit:cover; border:2px solid rgba(255,255,255,.15); }
+    .title{font-size: clamp(22px, 3.2vw, 32px); font-weight: 800; letter-spacing:.2px;}
+    .subtitle{ color:var(--muted); margin-top:2px; }
+    .links{ display:grid; gap:12px; margin:22px 0; }
+    .btn{
+      display:flex; align-items:center; gap:12px;
+      width:100%; text-decoration:none; color:var(--text);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      padding:14px 16px; border-radius:14px; font-weight:700; letter-spacing:.2px;
+      transition: transform .08s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,.18); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+    .btn:focus-visible{ outline: none; box-shadow: 0 0 0 6px var(--ring); }
+    .btn .icon{ width:22px; height:22px; display:grid; place-items:center; border-radius:8px; flex:0 0 22px; }
+    .btn .label{ flex:1 }
+    .btn .meta{ color:var(--muted); font-weight:600; font-size:14px; }
+    .x   { background:#000; }
+    .yt  { background:#ff0000; }
+    .link{ background:var(--brand); }
+    footer{ display:flex; gap:10px; justify-content:center; align-items:center; color:var(--muted); font-size:14px; margin-top:16px }
+    footer a{ color:var(--text); opacity:.9 }
+    .qr{ margin-top:16px; display:flex; justify-content:center }
+    .qr img{ width:128px; height:128px; image-rendering: pixelated; border-radius:12px; border:1px solid rgba(255,255,255,.15) }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card" role="region" aria-label="Perfil y enlaces">
+      <header>
+        <img class="avatar" src="./EscudoPallantiaPositivo.jpg" alt="Escudo del Foro por la Hispanidad" />
+        <div>
+          <div class="title">Foro por la Hispanidad – Palencia</div>
+          <div class="subtitle">Cultura, unidad y destino común hispánico.</div>
+        </div>
+      </header>
+
+      <div class="links" role="list">
+        <a class="btn" role="listitem" href="https://x.com/PalenciaHispana" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en X/Twitter">
+          <span class="icon x"></span>
+          <span class="label">X / Twitter</span>
+          <span class="meta">@PalenciaHispana</span>
+        </a>
+
+        <a class="btn" role="listitem" href="https://www.youtube.com/channel/UCjBL0D2Ui3orwKDq4Bat9Lg" target="_blank" rel="noopener noreferrer" aria-label="Nuestro canal en YouTube">
+          <span class="icon yt"></span>
+          <span class="label">YouTube</span>
+          <span class="meta">Canal Oficial</span>
+        </a>
+
+        <a class="btn" role="listitem" href="https://foroporlahispanidadpalencia.blogspot.com" target="_blank" rel="noopener noreferrer" aria-label="Visita nuestro blog">
+          <span class="icon link"></span>
+          <span class="label">Blog oficial</span>
+          <span class="meta">foroporlahispanidadpalencia</span>
+        </a>
+      </div>
+
+      <footer>
+        <span>© <span id="y"></span> · Foro por la Hispanidad – Palencia</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
